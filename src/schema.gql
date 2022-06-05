@@ -1,0 +1,55 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Post {
+  """Example field (placeholder)"""
+  id: Int!
+
+  """title of a post"""
+  title: String!
+
+  """content of a post"""
+  content: String!
+
+  """is published"""
+  isPublished: Boolean
+
+  """created at"""
+  createdAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  posts: [Post!]!
+  post(id: Int!): Post!
+}
+
+type Mutation {
+  createPost(createPostInput: CreatePostInput!): Post!
+  updatePost(updatePostInput: UpdatePostInput!): Post!
+  removePost(id: Int!): Post!
+}
+
+input CreatePostInput {
+  """title of a post"""
+  title: String!
+
+  """content of a post"""
+  content: String!
+}
+
+input UpdatePostInput {
+  """title of a post"""
+  title: String
+
+  """content of a post"""
+  content: String
+
+  """Example field (placeholder)"""
+  id: Int!
+}
